@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { searchProducts, filterByCategory, sortProducts } from "../utils/searchUtils";
+
 const ShopPage = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [sortBy, setSortBy] = useState("default");
+  const [filteredProducts, setFilteredProducts] = useState([]);
+
   const products = [
     {
       id: 1,
       image: "images/item1.jpg",
-      name: "Product 1",
+      name: "Premium Dog Food",
       price: "$25.00",
-      description: "High-quality product that you will love.",
+      description: "High-quality organic dog food that your pet will love.",
+      category: "food"
     },
     {
       id: 2,
