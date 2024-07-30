@@ -12,24 +12,30 @@ import AcountPage from "./Pages/AccountPage";
 import "/src/App.css";
 import Footer from "./components/Footer";
 import FooterBottom from "./components/FooterBottom";
+import { CartProvider } from "./contexts/CartContext";
+import { WishlistProvider } from "./contexts/WishlistContext";
 
 const App = () => {
   return (
-    <Router>
-      <Header></Header>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
+    <CartProvider>
+      <WishlistProvider>
+        <Router>
+          <Header></Header>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
 
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/shop" element={<ShopPage />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/account" element={<AcountPage />} />
-        <Route path="/wishlist" element={<Whishlist />} />
-      </Routes>
-      <Footer />
-      <FooterBottom />
-    </Router>
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/shop" element={<ShopPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/account" element={<AcountPage />} />
+            <Route path="/wishlist" element={<Whishlist />} />
+          </Routes>
+          <Footer />
+          <FooterBottom />
+        </Router>
+      </WishlistProvider>
+    </CartProvider>
   );
 };
 
