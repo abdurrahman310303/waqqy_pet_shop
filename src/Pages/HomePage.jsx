@@ -11,6 +11,7 @@ import ServiceSection from "../components/ServiceSection";
 import InstaSection from "../components/InstaSection";
 import OffcanvasCart from "../components/OffcanvasCart";
 import OffcanvasSearch from "../components/OffcanvasSearch";
+import PetCareTips from "../components/PetCareTips";
 
 const HomePage = () => {
   return (
@@ -21,6 +22,7 @@ const HomePage = () => {
       <Categories />
       <PetFoodies />
       <BannerSection />
+      <PetCareTips />
       <Testimonial />
       <BestSellingProducts />
       <Register />
