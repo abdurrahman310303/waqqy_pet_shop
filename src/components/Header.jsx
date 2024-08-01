@@ -3,8 +3,13 @@ import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import OffcanvasCart from "./OffcanvasCart";
 import OffcanvasSearch from "./OffcanvasSearch";
+import { useCart } from "../contexts/CartContext";
+import { useWishlist } from "../contexts/WishlistContext";
 
 const Header = () => {
+  const { getTotalItems } = useCart();
+  const { wishlistCount } = useWishlist();
+  
   return (
     <header>
       <div className="container py-2">
@@ -70,23 +75,30 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/wishlist" className="mx-3">
+                <Link to="/wishlist" className="mx-3 position-relative">
                   <Icon icon="mdi:heart" className="fs-4" />
+                  {wishlistCount > 0 && (
+                    <span className="position-absolute translate-middle badge rounded-circle bg-danger">
+                      {wishlistCount}
+                    </span>
+                  )}
                 </Link>
               </li>
 
               <li>
                 <Link
                   to="#"
-                  className="mx-3"
+                  className="mx-3 position-relative"
                   data-bs-toggle="offcanvas"
                   data-bs-target="#offcanvasCart"
                   aria-controls="offcanvasCart"
                 >
-                  <Icon icon="mdi:cart" className="fs-4 position-relative" />
-                  <span className="position-absolute translate-middle badge rounded-circle bg-primary pt-2">
-                    03
-                  </span>
+                  <Icon icon="mdi:cart" className="fs-4" />
+                  {getTotalItems() > 0 && (
+                    <span className="position-absolute translate-middle badge rounded-circle bg-primary">
+                      {getTotalItems()}
+                    </span>
+                  )}
                 </Link>
               </li>
 
