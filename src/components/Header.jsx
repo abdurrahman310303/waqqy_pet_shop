@@ -165,6 +165,71 @@ const Header = () => {
                     Shop
                   </Link>
                 </li>
+                <li className="nav-item dropdown">
+                  <Link 
+                    className="nav-link dropdown-toggle" 
+                    to="#" 
+                    role="button" 
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <Icon icon="mdi:paw" className="me-1" />
+                    Services
+                  </Link>
+                  <ul className="dropdown-menu">
+                    <li><Link className="dropdown-item" to="/appointments">
+                      <Icon icon="mdi:calendar-clock" className="me-2 text-primary" />
+                      Book Appointments
+                    </Link></li>
+                    <li><Link className="dropdown-item" to="/grooming">
+                      <Icon icon="mdi:content-cut" className="me-2 text-info" />
+                      Pet Grooming
+                    </Link></li>
+                    <li><Link className="dropdown-item" to="/adoption">
+                      <Icon icon="mdi:heart" className="me-2 text-danger" />
+                      Pet Adoption
+                    </Link></li>
+                    <li><Link className="dropdown-item" to="/insurance">
+                      <Icon icon="mdi:shield-heart" className="me-2 text-success" />
+                      Pet Insurance
+                    </Link></li>
+                    <li><hr className="dropdown-divider" /></li>
+                    <li><Link className="dropdown-item" to="/emergency">
+                      <Icon icon="mdi:phone-alert" className="me-2 text-warning" />
+                      Emergency Contacts
+                    </Link></li>
+                  </ul>
+                </li>
+                <li className="nav-item dropdown">
+                  <Link 
+                    className="nav-link dropdown-toggle" 
+                    to="#" 
+                    role="button" 
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <Icon icon="mdi:tools" className="me-1" />
+                    Tools
+                  </Link>
+                  <ul className="dropdown-menu">
+                    <li><Link className="dropdown-item" to="/comparison">
+                      <Icon icon="mdi:compare-horizontal" className="me-2 text-info" />
+                      Product Comparison
+                    </Link></li>
+                    <li><Link className="dropdown-item" to="/calculator">
+                      <Icon icon="mdi:calculator" className="me-2 text-secondary" />
+                      Food Calculator
+                    </Link></li>
+                    <li><Link className="dropdown-item" to="/loyalty">
+                      <Icon icon="mdi:crown" className="me-2 text-warning" />
+                      Loyalty Program
+                    </Link></li>
+                    <li><Link className="dropdown-item" to="/faq">
+                      <Icon icon="mdi:help-circle" className="me-2 text-primary" />
+                      FAQ
+                    </Link></li>
+                  </ul>
+                </li>
                 <li className="nav-item">
                   <Link to="/blog" className="nav-link">
                     Blog
