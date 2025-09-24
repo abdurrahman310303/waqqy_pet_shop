@@ -675,3 +675,184 @@ CSS STRUCTURE:
     background-color: var(--accent-color);
   }
   
+  /* Custom styles for pet shop features */
+  .feature-card {
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.1) !important;
+    border-color: #007bff;
+  }
+  
+  .feature-card .card-body:hover .btn {
+    transform: scale(1.05);
+  }
+  
+  .feature-card .btn {
+    transition: transform 0.2s ease;
+  }
+  
+  /* Smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Service cards animation */
+  .service-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .service-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  }
+  
+  /* Dropdown menu improvements */
+  .dropdown-menu {
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+  }
+  
+  .dropdown-item {
+    padding: 0.7rem 1.2rem;
+    transition: all 0.2s ease;
+    border-radius: 6px;
+    margin: 0 0.3rem;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f8f9fa;
+    transform: translateX(5px);
+  }
+  
+  /* Feature section background */
+  .features-showcase {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  }
+  
+  /* Quick access cards */
+  .quick-access-card {
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .quick-access-card:hover {
+    border-color: #007bff;
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+  }
+  
+  .quick-access-card:hover .text-muted {
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
+  
+  /* Pulse animation for emergency cards */
+  .emergency-card {
+    animation: pulse-emergency 2s infinite;
+  }
+  
+  @keyframes pulse-emergency {
+    0% {
+      box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.4);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+    }
+  }
+  
+  /* Loading spinner for components */
+  .loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(0,0,0,.1);
+    border-radius: 50%;
+    border-top-color: #007bff;
+    animation: spin 1s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Badge improvements */
+  .badge {
+    font-size: 0.75em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Alert improvements */
+  .alert {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  }
+  
+  /* Card improvements */
+  .card {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .card-header {
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    background: rgba(0,0,0,0.02);
+  }
+  
+  /* Button improvements */
+  .btn {
+    border-radius: 8px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    transform: translateY(-1px);
+  }
+  
+  /* Icon improvements */
+  .iconify {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  /* Mobile responsive adjustments */
+  @media (max-width: 768px) {
+    .feature-card {
+      margin-bottom: 1.5rem;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-4px);
+    }
+    
+    .display-4 {
+      font-size: 2rem;
+    }
+    
+    .display-5 {
+      font-size: 1.75rem;
+    }
+  }
+  
+  /* Section spacing improvements */
+  section, .section {
+    padding: 4rem 0;
+  }
+  
+  @media (min-width: 992px) {
+    section, .section {
+      padding: 6rem 0;
+    }
+  }
